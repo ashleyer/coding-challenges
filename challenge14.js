@@ -30,27 +30,36 @@
 //     * only thing is that i think this would be O(n ^ 2), not ideal.
 
 
-
-// sortedNums[i] * 2 =// let inNumsTwice = [];
-
-let nums = [];
+function includes(arr, num) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) return true;
+    }
+    return false;
+}
 
 function getSingleInstance(nums) {
 
-    nums = [7, 6, 9, 9, 7, 5, 2, 4, 6, 2, 5]
     let sortedNums = nums.sort((a, b) => a - b);
-    console.log(sortedNums);
+    //console.log(sortedNums);
 
-    let inArrayOnce = 0;
+
+    if (sortedNums.length === 1) {
+        return sortedNums[0] + " is the element that appears only once in this array.";
+    }
 
     for (let i = 0; i < sortedNums.length; i++) {
-        if (i == i++) {
-            (i + inArrayOnce)
-            return inArrayOnce;
-        } else {
-            i++
+        if (sortedNums[i] !== sortedNums[i + 1] && sortedNums[i] !== sortedNums[i - 1]) {
+            return sortedNums[i] + " is the element that appears only once in this array.";
         }
-        // return 
-    }
-}
-getSingleInstance(nums);
+    };
+
+    return "All elements appear twice in this array.";
+};
+
+console.log(getSingleInstance([7, 6, 9, 9, 7, 5, 2, 4, 6, 2, 5]));
+console.log(getSingleInstance([2, 2, 1]));
+console.log(getSingleInstance([4, 1, 2, 1, 2]));
+console.log(getSingleInstance([1]));
+console.log(getSingleInstance([7, 7, 3, 3, 9, 9, 2, 2, 5, 5]));
+
+
