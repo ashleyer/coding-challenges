@@ -1,5 +1,5 @@
 Interview question Challenge - Common Interview Questions: A series
-In your own words what is the difference between declaring variables using var, let and const.
+In your own words what are callbacks?
 Examples
   N/A
   

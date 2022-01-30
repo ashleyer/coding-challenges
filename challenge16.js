@@ -34,7 +34,7 @@
   
 // }
 let sentenceWithMarks = "I found my soulmate (/I'm in love!).";
-function pig(sentenceWithMarks) {
+function pig() {
   // let marks = [".", "?", "!", ",", ";", "-", ":", "(", ")", ' " ', " ' ", "/", "#", "$", "%", "&", "@", "*", "^"];
   let sentence = sentenceWithMarks.replace(/[^a-zA-Z ]/g, "");
   console.log(sentence);
@@ -54,6 +54,7 @@ function pig(sentenceWithMarks) {
   
       // readyToPigify[i] = word.substring(1) + word.substring(0, 1) + ayAyAy;
       totallyPigified.push(pigified);
+      console.log(totallyPigified)
       return totallyPigified
       // } else {
 
@@ -63,6 +64,7 @@ function pig(sentenceWithMarks) {
   }
 }
   
+pig()
   
 
   
